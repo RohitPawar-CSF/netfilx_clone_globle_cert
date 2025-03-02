@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone - Login & Register</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 350px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+            text-align: center;
+            position: relative;
+        }
+        .container h2 {
+            margin-bottom: 20px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #333;
+            color: #fff;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: red;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: darkred;
+        }
+        .toggle-btn {
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 10px;
+            display: block;
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #register-box {
+            display: none;
+        }
+        #switch:checked ~ #login-box {
+            display: none;
+        }
+        #switch:checked ~ #register-box {
+            display: block;
+        }
+        #switch {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="checkbox" id="switch">
+        <div id="login-box" class="form-container">
+            <h2>Sign In</h2>
+            <div class="input-group">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Password" required>
+            </div>
+            <button class="btn">Sign In</button>
+            <label for="switch" class="toggle-btn">New to Netflix? Sign up now.</label>
+        </div>
+        
+        <div id="register-box" class="form-container">
+            <h2>Sign Up</h2>
+            <div class="input-group">
+                <input type="text" placeholder="Full Name" required>
+            </div>
+            <div class="input-group">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Password" required>
+            </div>
+            <button class="btn">Sign Up</button>
+            <label for="switch" class="toggle-btn">Already have an account? Sign in.</label>
+        </div>
+    </div>
+</body>
+</html>
